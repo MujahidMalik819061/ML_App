@@ -22,7 +22,7 @@ with st.sidebar:
     st.header("Welcome to Machine Learning Application!")
     st.subheader("This Application is made for learning machine models.")
     st.caption("Choose your parameters here: ")
-    choose=st.radio(":computer:",["Dataset","Explore & Analysis","Train","Download Files"])
+    choose=st.radio(":computer:",["Dataset","Explore","Train","Download"])
     
 if choose=="Dataset":
     st.write("Please upload your dataset here.")
@@ -33,13 +33,13 @@ if choose=="Dataset":
         df.to_csv("sourcev.csv", index = None)
         st.dataframe(df)
 
-if choose=="Analysis":
+if choose=="Explore":
     st.subheader("Perform profiling on Dataset")
     if st.sidebar.button("Do Analysis"):
         profile_report = df.profile_report() 
         st_profile_report(profile_report)
     
-if choose=="Training":
+if choose=="Train":
     st.header("Start Training your Model now.")
     choice = st.sidebar.selectbox("Select your Technique:", ["Classification","Regression"])
     target = st.selectbox("Select you Target Variable",df.columns)
