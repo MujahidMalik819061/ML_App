@@ -25,8 +25,9 @@ with st.sidebar:
     choose=st.radio(":computer:",["Dataset","Explore","Train","Download"])
     
 if choose=="Dataset":
-    st.write("Please upload your dataset here. only .csv file")
-    dataset_value = st.file_uploader("Upload here")
+    st.caption("Thid model helps you on to do Classification & Regression algorithms on dataset you are uploading")
+    st.write("Please upload your dataset here. only .csv file accepted!")
+    dataset_value = st.file_uploader("Upload here (click on the browse file)")
     
     if dataset_value:
         df = pd.read_csv(dataset_value, index_col=None)
