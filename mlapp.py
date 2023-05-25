@@ -20,8 +20,7 @@ if os.path.exists("sourcev.csv"):
 
 with st.sidebar:
     st.header("Welcome to Machine Learning Application Model")
-    st.info("Select the options to work on the dataset. The uploded dataset can be analysed by using 'Analysis' button.\n To train the 
-    model,choose the area you want to work on i.e., Classification & Regression. \n You can download the model (.pkl) file using 'Download' button. ")
+    st.info("Select the options to work on the dataset. The uploded dataset can be analysed by using 'Analysis' button.\n To train the model,choose the area you want to work on i.e., Classification & Regression. \n You can download the model (.pkl) file using 'Download' button. ")
     st.caption("Choose your parameters here: ")
     choose=st.radio(":computer:",["Dataset","Explore","Train","Download"])
     
